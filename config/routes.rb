@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :products
+  get "game/rps"
   root "home#home"
   get "home/about"
   get "home/contact"
