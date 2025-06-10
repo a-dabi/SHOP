@@ -11,7 +11,11 @@
 
   <p>
     <strong>Image url:</strong>
-    <%=image_tag product.image_url %>
+    <% if product.image_url.present? %>
+    <%= image_tag product.image_url, alt: "Product image", class: "img-fluid" %>
+  <% else %>
+    <em>No image available</em>
+  <% end %>
   </p>
 
 </div>
