@@ -8,3 +8,6 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 Product.create(name: "seed-generated product", description: "I also created this product without using the HTML form!")
+
+Order.create(user_id: 1, product_id: 1, total: 10.0)
+Order.create(user_id: 1, product_id: 2, total: 5.0)
