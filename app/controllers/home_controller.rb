@@ -4,7 +4,6 @@ class HomeController < ApplicationController
 
   def home
     @featured_product = Product.first
-
   end
 
   def about
@@ -13,5 +12,4 @@ class HomeController < ApplicationController
   def contact
     @products = Product.limit(3)
   end
-
 end
