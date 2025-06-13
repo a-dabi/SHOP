@@ -2,12 +2,13 @@ Rails.application.routes.draw do
   resources :products
 
   root "home#home"
-  
+
   get "home/home", to: "home#home"
   get "home/about"
   get "home/contact"
   get "home/products"
   get "home/index"
+  post 'home/thank_you'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
 
