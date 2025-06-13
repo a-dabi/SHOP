@@ -24,10 +24,34 @@
             <li class="nav-item"><%= link_to "About", home_about_path, class: "nav-link" %></li>
             <li class="nav-item"><%= link_to "Contact", home_contact_path, class: "nav-link" %></li>
             <li class="nav-item"><%= link_to "products", products_path, class: "nav-link" %></li>
+
+            <ul class="navbar-nav ml-auto">
+              <% if user_signed_in? %>
+              <li class="nav-item">
+                <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-link") %>
+              </li>
+              <% else %>
+              <li class="nav-item">
+                <%= link_to('Login', new_user_session_path, class: "nav-link") %>
+              </li>
+              <% end %>
           </ul>
         </div>
       </div>
     </nav>
+
+    <ul class="navbar-nav ml-auto">
+      <% if user_signed_in? %>
+      <li class="nav-item">
+        <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-link") %>
+      </li>
+      <% else %>
+      <li class="nav-item">
+        <%= link_to('Login', new_user_session_path, class: "nav-link") %>
+      </li>
+      <% end %>
+      </li>
+    </ul>
 
     <!-- Main Page Content -->
     <div class="container mt-4">
